@@ -1,13 +1,28 @@
 import mongoose from 'mongoose';
 
-// TODO - Sample model from mongoose
 const schema = new mongoose.Schema({
-  name: {
+  firstName: {
     type: String,
     required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  level: {
+    type: String,
+    required: true,
+  },
+  points: {
+    type: Number,
+    default: 0
+  },
+  avatarUrl: {
+    type: String,
+    default: 'https://source.boringavatars.com/beam',
   },
 });
 
 export const UsersModel =
-  mongoose.models.Events || mongoose.model('Users', schema);
+  mongoose.models.users || mongoose.model('users', schema);
 export const UsersSchema = schema;

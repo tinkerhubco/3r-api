@@ -32,7 +32,7 @@ if (!cached) {
   cached = getCacheInitialValue();
 }
 
-export const mongooseConnect = async () => {
+export const mongoDbConnect = async () => {
   // Satisfy linting
   if (!cached) {
     cached = getCacheInitialValue();
