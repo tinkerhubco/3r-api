@@ -13,7 +13,7 @@ export const getAllActivities: NextApiHandler = async (req, res) => {
 
   const activitiesWithComputedProperties = await Promise.all(
     activities.map(async (activity) => {
-      const hasJoined = !!activity.participants.find((id) => {
+      const hasJoined = !!activity.participants.find((id: any) => {
         return id.equals(userId);
       });
 
