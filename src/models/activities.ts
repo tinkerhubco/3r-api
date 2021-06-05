@@ -36,7 +36,10 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  participants: [UsersSchema],
+  participants: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users',
+  }],
   maxAttemptsCount: {
     type: Number,
     required: true,
