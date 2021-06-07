@@ -20,7 +20,7 @@ export const getAllActivities: NextApiHandler = async (req, res) => {
       const activityId = activity._id;
 
       const earnedPoints = 10;
-      const attemptsCount = 1;
+      const attemptsCount = 0;
       const participantsCount = activity.participants.length;
       const vouchers = await VouchersModel.find({
         activityId,
